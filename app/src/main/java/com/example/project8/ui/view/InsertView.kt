@@ -1,4 +1,4 @@
-package com.example.project8.ui.View
+package com.example.project8.ui.view
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -22,11 +22,11 @@ import androidx.compose.ui.input.nestedscroll.nestedScroll
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
-import com.example.project8.ui.Navigation.DestinasiNavigasi
-import com.example.project8.ui.ViewModel.InsertUiEvent
-import com.example.project8.ui.ViewModel.InsertUiState
-import com.example.project8.ui.ViewModel.InsertViewModel
-import com.example.project8.ui.ViewModel.PenyediaViewModel
+import com.example.project8.ui.navigation.DestinasiNavigasi
+import com.example.project8.ui.viewModel.InsertUiEvent
+import com.example.project8.ui.viewModel.InsertUiState
+import com.example.project8.ui.viewModel.InsertViewModel
+import com.example.project8.ui.viewModel.PenyediaViewModel
 import com.example.project8.ui.customWidget.CustomTopAppBar
 import kotlinx.coroutines.launch
 

@@ -1,4 +1,4 @@
-package com.example.project8.ui.View
+package com.example.project8.ui.view
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
@@ -38,10 +38,10 @@ import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.project8.R
 import com.example.project8.model.Mahasiswa
-import com.example.project8.ui.Navigation.DestinasiNavigasi
-import com.example.project8.ui.ViewModel.HomeUiState
-import com.example.project8.ui.ViewModel.HomeViewModel
-import com.example.project8.ui.ViewModel.PenyediaViewModel
+import com.example.project8.ui.navigation.DestinasiNavigasi
+import com.example.project8.ui.viewModel.HomeUiState
+import com.example.project8.ui.viewModel.HomeViewModel
+import com.example.project8.ui.viewModel.PenyediaViewModel
 import com.example.project8.ui.customWidget.CustomTopAppBar
 
 object DestinasiHome: DestinasiNavigasi {
