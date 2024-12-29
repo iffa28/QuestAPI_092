@@ -2,6 +2,9 @@ package com.example.project8.ViewModel
 
 import com.example.project8.model.Mahasiswa
 
+fun Mahasiswa.toUiStateMhs(): InsertUiState = InsertUiState(
+    insertUiEvent = toInsertUiEvent()
+)
 
 fun Mahasiswa.toInsertUiEvent(): InsertUiEvent = InsertUiEvent(
     nim = nim,
