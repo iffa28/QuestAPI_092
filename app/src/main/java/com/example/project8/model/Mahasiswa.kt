@@ -1,7 +1,9 @@
 package com.example.project8.model
 
 import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
+@Serializable
 data class Mahasiswa(
     val nim: String,
     val nama: String,
