@@ -15,7 +15,7 @@ interface AppContainer{
 class MahasiswaContainer : AppContainer{
 
     // URL dasar untuk mengakses API
-    private val baseUrl = "http://localhost:8000/umyTI/"
+    private val baseUrl = "http://10.0.2.2:8000/umyTI/"
 
     // Mengatur JSON parser agar bisa mengabaikan data yang tidak dikenal di response
     private val json = Json { ignoreUnknownKeys = true }
