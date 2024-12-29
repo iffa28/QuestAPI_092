@@ -13,6 +13,27 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.project8.model.Mahasiswa
+import com.example.project8.ui.viewModel.DetailMhsUiState
+
+@Composable
+fun DetailStatus(
+    mhsUiState: DetailMhsUiState,
+    retryAction: () -> Unit,
+    modifier: Modifier = Modifier,
+    onEditClick: (String) -> Unit = {},
+){
+    when(mhsUiState){
+        is DetailMhsUiState.Success -> {
+            DetailMhsLayout(
+                mahasiswa = mhsUiState.mahasiswa,
+                modifier = modifier,
+                onEditClick = {onEditClick(it)}
+            )
+        }
+        is DetailMhsUiState.Loading -> OnLoading(modifier = modifier)
+        is DetailMhsUiState.Error -> OnError(retryAction, modifier = modifier)
+    }
+}
 
 @Composable
 fun DetailMhsLayout(
