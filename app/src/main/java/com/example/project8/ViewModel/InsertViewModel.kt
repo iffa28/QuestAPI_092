@@ -8,3 +8,7 @@ data class InsertUiEvent(
     val kelas: String = "",
     val angkatan: String = ""
 )
+
+data class InsertUiState(
+    val insertUiEvent: InsertUiEvent = InsertUiEvent()
+)
