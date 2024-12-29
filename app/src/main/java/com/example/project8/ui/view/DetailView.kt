@@ -32,6 +32,38 @@ object DestinasiDetail : DestinasiNavigasi {
     val routeWithArgs = "$route/{$NIM}"
 }
 
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+fun DetailMhsScreen(
+    navigateBack: () -> Unit,
+    onEditClick: (String) -> Unit,
+    modifier: Modifier = Modifier,
+    detailViewModel: DetailViewModel = viewModel(factory = PenyediaViewModel.Factory)
+){
+    val scrollBehavior = TopAppBarDefaults.enterAlwaysScrollBehavior()
+
+    Scaffold(
+        modifier = modifier.nestedScroll(scrollBehavior.nestedScrollConnection),
+        topBar = {
+            CustomTopAppBar(
+                title = DestinasiDetail.titleRes,
+                canNavigateBack = true,
+                scrollBehavior = scrollBehavior,
+                navigateUp = navigateBack
+            )
+        },
+    )
+    { innerPadding ->
+        DetailStatus(
+            mhsUiState = detailViewModel.detailMhsUiState,
+            retryAction = {detailViewModel.getMhsbyId() },
+            modifier = Modifier.padding(innerPadding)
+                .fillMaxSize(),
+            onEditClick = onEditClick
+
+        )
+    }
+}
 
 @Composable
 fun DetailStatus(
