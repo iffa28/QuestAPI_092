@@ -11,6 +11,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.example.project8.ui.viewModel.MahasiswaApp
 import com.example.project8.ui.theme.Project8Theme
 
 class MainActivity : ComponentActivity() {
@@ -20,10 +21,8 @@ class MainActivity : ComponentActivity() {
         setContent {
             Project8Theme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
+                    MahasiswaApp(
+                        modifier = Modifier.padding(innerPadding))
                 }
             }
         }
