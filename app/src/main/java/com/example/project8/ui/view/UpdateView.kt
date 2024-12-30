@@ -32,7 +32,7 @@ fun UpdateMhsScreen(
     Scaffold(
         topBar = {
             CustomTopAppBar(
-                title = "Update Mahasiswa",
+                title = DestinasiUpdate.titleRes,
                 canNavigateBack = true,
                 navigateUp = navigateBack
             )
