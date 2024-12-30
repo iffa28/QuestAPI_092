@@ -9,6 +9,8 @@ import androidx.lifecycle.viewModelScope
 import com.example.project8.model.Mahasiswa
 import com.example.project8.repository.MahasiswaRepository
 import kotlinx.coroutines.launch
+import retrofit2.HttpException
+import java.io.IOException
 
 // Kelas sealed untuk merepresentasikan berbagai status UI pada DetailMhs
 sealed class DetailMhsUiState {
@@ -41,6 +43,18 @@ class DetailViewModel(
             }
         }
 
+    }
+
+    fun deleteMhs(nim: String){
+        viewModelScope.launch {
+            try {
+                mahasiswaRepository.deleteMahasiswa(nim)
+            } catch (e: IOException) {
+                HomeUiState.Error
+            } catch (e: HttpException) {
+                HomeUiState.Error
+            }
+        }
     }
 
 }
