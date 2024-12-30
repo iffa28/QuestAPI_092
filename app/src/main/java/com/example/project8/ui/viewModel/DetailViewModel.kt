@@ -50,9 +50,9 @@ class DetailViewModel(
             try {
                 mahasiswaRepository.deleteMahasiswa(nim)
             } catch (e: IOException) {
-                HomeUiState.Error
+                DetailMhsUiState.Error
             } catch (e: HttpException) {
-                HomeUiState.Error
+                DetailMhsUiState.Error
             }
         }
     }
